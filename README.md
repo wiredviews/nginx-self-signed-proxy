@@ -36,7 +36,7 @@ Creating proxied-server ... done
 Creating nginx-proxy    ... done
 ```
 
-At this point, your service should be available at https://<<machine name>>/
+At this point, your service should be available at https://<machine name>/
 
 You'll have to add a security exception in your browser the first time you access it.
 
