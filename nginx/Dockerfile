@@ -2,7 +2,7 @@ FROM alpine:3.9 as builder
 RUN apk add --no-cache openssl
 RUN openssl req \
             -x509 \
-            -subj "/CN=localhost" \
+            -subj "/C=US/ST=Denial/L=Nowhere/O=Dis" \
             -nodes \
             -days 3650 \
             -newkey rsa:2048 \

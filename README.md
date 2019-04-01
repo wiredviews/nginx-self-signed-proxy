@@ -1,7 +1,9 @@
 Nginx reverse proxy with self-signed SSL cert
 ============
 
-1. Build the nginx container with a self-signed ssl certificate with a lifetime of ten years.
+1. Build the nginx container with a self-signed ssl certificate with a lifetime of ten years. 
+
+From the project root:
 
 ```bash
 cd nginx
