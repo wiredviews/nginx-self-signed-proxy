@@ -1,0 +1,20 @@
+version: '3'
+services:
+  nginx:
+    image: wiredviews/nginx-self-signed-proxy:latest
+    container_name: nginx-proxy
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - proxied-service
+    external_links: 
+      - proxied-service
+
+  proxied-service:
+    environment:
+      JAVA_OPTIONS: "-Djetty.port=9999"
+    image: plantuml/plantuml-server:jetty
+    container_name: proxied-server
+    expose:
+      - 9999
